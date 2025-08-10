@@ -1,5 +1,3 @@
-ol.proj.proj4.register(proj4);
-//ol.proj.get("EPSG:4326").setExtent([115.124660, -8.776354, 115.267117, -8.676905]);
 var wms_layers = [];
 
 
@@ -23,9 +21,9 @@ var lyr_CitraSatelit_1 = new ol.layer.Image({
         source: new ol.source.ImageStatic({
             url: "./layers/CitraSatelit_1.png",
             attributions: ' ',
-            projection: 'EPSG:4326',
+            projection: 'EPSG:3857',
             alwaysInRange: true,
-            imageExtent: [115.178392, -8.793249, 115.271907, -8.705573]
+            imageExtent: [12821600.000000, -982725.361436, 12832010.000000, -972850.446785]
         })
     });
 var lyr_Kedalaman_2 = new ol.layer.Image({
@@ -43,14 +41,14 @@ var lyr_Kedalaman_2 = new ol.layer.Image({
         source: new ol.source.ImageStatic({
             url: "./layers/Kedalaman_2.png",
             attributions: ' ',
-            projection: 'EPSG:4326',
+            projection: 'EPSG:3857',
             alwaysInRange: true,
-            imageExtent: [115.178392, -8.793249, 115.271907, -8.705573]
+            imageExtent: [12821600.000000, -982725.361436, 12832010.000000, -972850.446785]
         })
     });
 var format_Daratan_3 = new ol.format.GeoJSON();
 var features_Daratan_3 = format_Daratan_3.readFeatures(json_Daratan_3, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
 var jsonSource_Daratan_3 = new ol.source.Vector({
     attributions: ' ',
 });
